@@ -1,6 +1,6 @@
+const button=document.querySelector('.btn');
 const container=document.querySelector('.container');
 
-let times = 16;
 
 
 let mouseDown = false;
@@ -8,6 +8,13 @@ container.setAttribute('draggable', 'false')
 
 function createGrids(){
     container.innerHTML='';
+    let times = parseInt(prompt("times"));
+    if (isNaN(times)||times<1)
+    {
+        times=16;
+    }
+
+
 
     for (let i=0;i<times*times;i++) {
         const cell = document.createElement('div');
@@ -48,3 +55,4 @@ function createGrids(){
 
 createGrids();
 
+button?.addEventListener("click",createGrids);
