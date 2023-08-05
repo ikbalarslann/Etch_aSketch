@@ -1,0 +1,12 @@
+.container{
+    width: 128px;
+    height: 128px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid{
+    flex: 1 0 auto;
+}
+.grid:hover, .grid.black{
+    background-color: rgb(0, 5, 5) !important;
+}
